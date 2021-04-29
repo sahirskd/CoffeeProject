@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Coffee</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <link type="text/css" rel="stylesheet" href="./css/custom.css">
+
+  <style>
+    #navigator {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #navigator .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    @media (max-width: 720px) {
+      #navigator {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+
+    #navigator a {
+      font-size: 14px;
+    }
+
+    #navigator+section {
+      padding: 250px 0;
+    }
+
+    .activee, a:hover{
+      color: #b59983 !important;
+    }
+
+    .nav-link{
+      margin: 0rem 1.5rem 0rem 0rem;
+      font-size: 1.2rem;
+   }
+
+
+   .c-icons{
+     margin: 0px 11px 0px 0px;
+   }
+
+   .btn{
+    border: 1.5px solid;
+    border-radius: 0px;
+    font-size: 1.2rem;
+   }
+   .bg-dark{
+     background-color: #381510 !important;
+   }
+
+   .btn:hover{
+     background: #c1a983;
+     color: rgb(0, 0, 0) !important;
+     border-color: #c1a983;
+   }
+
+   .margin-l{
+     margin-left: 20px;
+   }
+
+   .logopng{
+    height: 95px;
+    width: 95px;
+    position: absolute;
+    top: 9px;
+    left: -48px;
+    z-index: 100;
+}
+
+
+.bgImg{
+  background-image: url(https://image.freepik.com/free-photo/coffee-beans-with-props-making-coffee_1220-4536.jpg);
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+
+.t-white{
+  color: white;
+  font-weight: 300;
+}
+   
+.bold-t{
+  font-weight: 600;
+}
+
+
+.lead{
+  color: white;
+}
+
+
+.btn-secondary{
+  background-color: rgba(255, 255, 255, 0.39);
+}
+
+.btn-secondary:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0);
+}
+
+
+
+.bgtext {
+    position: relative;
+   margin-top: 4%;
+  text-align: center;
+        }
+  
+.bgtext:after {
+  margin: 3rem;
+    content: "Products";
+    position: absolute;
+    font-weight: 1000;
+    font-size: 10rem;
+    color: rgb(187 182 182 / 30%);
+    top: -79px;
+    left: 199px;
+    z-index: -1;
+  }
+
+
+  .bgtext-t{
+    font-size: 3rem;
+    color: #391405;
+    position: absolute;
+    top: 66px;
+    left: 35%;
+  }
+
+
+  .bg-p{
+    left: 40%;
+    position: absolute;
+    top: 45px;
+    font-weight: 600;
+    font-size: 25px;
+    color: #b3a183;
+  }
+
+  .tabs{
+    margin-top: 17%;
+  }
+
+
+  .nav-tabs{
+    margin-left: 27%;
+  }
+
+  .active-tab{
+    border: none !important;
+    border-bottom: 2px solid #df817b !important;
+}
+
+.unactive-tab{
+  border: none !important;
+}
+
+
+.bgtextnd {
+    position: relative;
+   margin-top: 4%;
+  text-align: center;
+        }
+
+.bgtextnd:after {
+  margin: 3rem;
+    content: "Coffee Beans";
+    position: absolute;
+    font-weight: 1000;
+    font-size: 8rem;
+    color: rgb(187 182 182 / 30%);
+    top: -79px;
+    left: 199px;
+    z-index: -1;
+  }
+
+
+  .bgtextnd-t{
+    font-size: 3rem;
+    color: #391405;
+    position: absolute;
+    top: 36px;
+    left: 38%;
+  }
+
+
+  .bgnd-p{
+    left: 45%;
+    position: absolute;
+    top: 14px;
+    font-weight: 600;
+    font-size: 25px;
+    color: #b3a183;
+  }
+
+
+  .bg-grey{
+    background: #f9f9f9;
+    margin: 13px 30px 0px 30px;
+  }
+
+
+
+  .col-3{
+    background: white;
+    padding: 3%;
+  }
+
+  .add-to-cart{
+    background: #4e99cc;
+    color: white;
+  }
+
+  .add-to-cart:hover{
+    color: white !important;
+  }
+
+  .view-all{
+    position: absolute;
+    top: 89%;
+    left: 41%;
+    border: 1px solid #3a160a;
+    background: #3a160a;
+    color: white;
+  }
+
+
+
+  .bg-img{
+    margin-top: 18%;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190124/pngtree-coffee-background-for-simple-coffee-restaurant-image_1506.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  object-fit: contain;
+  padding: 5%;
+  }
+
+
+  .pricing{
+    color: #d96e5b;
+  }
+  </style>
+</head>
+
+<body>
+    <header class="bg-dark">
+        <div class="container">
+          <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#">
+              <img class="logopng" src="./logo.png" height="30" alt="image">
+            </a>
+      
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav11" aria-controls="navbarNav11" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarNav11">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="activee nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Merchandise</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+              </ul>
+      
+              <a class="btn btn-outline-light ml-md-3" href="#">Login</a>
+              <a class="btn btn-outline-light ml-md-3" href="#">Sign Up</a>
+
+              <ul class="navbar-nav col-2 justify-content-end d-none d-md-flex margin-l">
+                <li class="nav-item">
+                  <a class="nav-link c-icons" href="#"><i class="fas fa-search fa-lg"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link c-icons" href="#"><i class="fas fa-cart-plus fa-lg"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link c-icons" href="#"><i class="fas fa-user-tie fa-lg"></i></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+
+
+
+      <!-- main content -->
+      <section class="fdb-block bgImg">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-12 col-lg-7 col-xl-7">
+              <h1 class="t-white">Coffee <span class="bold-t">Impacts</span> More <br> 
+                Than Just Your <span class="bold-t">Morning.</span></h1>
+              <p class="lead mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident possimus soluta, libero modi perspiciatis similique.
+              </p>
+      
+              <p class="mt-4">
+                <a class="btn btn-secondary" href="#">View Products</a>
+                <a class="btn btn-secondary ml-3" href="#">Read More</a>
+              </p>
+            </div>
+            <div class="col-12 col-md-8 m-auto ml-lg-auto mr-lg-0 col-lg-6 pt-5 pt-lg-0">
+              <!-- <img alt="image" class="img-fluid" src="./imgs/draws/browsers.svg"> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <!-- products content -->
+      <div class="bgtext container">
+        <p class="bg-p">Choose Your Coffee</p>
+        <h1 class="bgtext-t">Recent Products</h1>
+      </div>
+
+
+      <!-- tabs  -->
+<div class="container tabs">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active-tab active" aria-current="page" href="#">Different Coffees</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active unactive-tab" aria-current="page" href="#">Best Seller</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active unactive-tab" aria-current="page" href="#">New Addition</a>
+        </li>
+      </ul>
+ </div>      
+
+
+
+
+
+<!-- Product corousol -->
+ <section class="fdb-block bg-grey team-4">
+  <div class="container ">
+    <div class="row text-center">
+      <div class="col-3">
+        <img alt="image" class="img-fluid rounded" src="https://images-na.ssl-images-amazon.com/images/I/71auvdgCSYL._AC_SL1500_.jpg">
+        <h3><strong>Coffee Pack</strong></h3>
+        <p>The best coffee from the best company for you.</p>
+        <h2 class="pricing">$120</h2>
+
+        <a class="btn add-to-cart" href="#">add to cart</a>
+      </div>
+
+      <div class="col-3">
+        <img alt="image" class="img-fluid rounded" src="https://images-na.ssl-images-amazon.com/images/I/71auvdgCSYL._AC_SL1500_.jpg">
+        <h3><strong>Coffee Bean</strong></h3>
+        <p>The best coffee from the best company for you.</p>
+        <h2 class="pricing">$120</h2>
+
+                <a class="btn add-to-cart" href="#">add to cart</a>
+
+      </div>
+
+      <div class="col-3">
+        <img alt="image" class="img-fluid rounded" src="https://images-na.ssl-images-amazon.com/images/I/71auvdgCSYL._AC_SL1500_.jpg">
+        <h3><strong>Green Africana</strong></h3>
+        <p>The best coffee from the best company for you.</p>
+        <h2 class="pricing">$120</h2>
+
+                <a class="btn add-to-cart" href="#">add to cart</a>
+
+      </div>
+
+      <div class="col-3">
+        <img alt="image" class="img-fluid rounded" src="https://images-na.ssl-images-amazon.com/images/I/71auvdgCSYL._AC_SL1500_.jpg">
+        <h3><strong>Ephiopian Aroma</strong></h3>
+        <p>The best coffee from the best company for you.</p>
+        <h2 class="pricing">$120</h2>
+                <a class="btn add-to-cart" href="#">add to cart</a>
+
+      </div>
+    </div>
+    
+  </div>
+  <a class="btn view-all" href="#">view all products</a>
+
+</section>
+
+
+
+<!-- another content -->
+ <div class="bgtextnd container">
+  <p class="bgnd-p">How we pick</p>
+  <h1 class="bgtextnd-t">Best Coffee Beans</h1>
+</div>
+
+
+
+<div class="bg-img">
+  <div class="container">
+<h1 class="t-white">How we pick</h1>
+<ul class="lead  d-flex">
+  <li>Planting</li>
+  <li class="ml-5">Packaging</li>
+</ul>
+</div>
+</div>
+
+
+
+<!-- footer    -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
